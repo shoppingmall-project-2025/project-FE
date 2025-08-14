@@ -1,0 +1,5 @@
+.mainPage-container {
+    /* 화면 꽉차게 */
+    max-width: 100vw;
+    overflow-x: hidden;
+}

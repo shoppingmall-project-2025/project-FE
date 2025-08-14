@@ -1,0 +1,94 @@
+.category-menu-container {
+    position: relative;
+    display: inline-block;
+}
+
+.category-button {
+    padding: 10px 10px;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* 드롭다운 패널 전체 (숨겨져 있다가 나타남) */
+.category-dropDown-pannel {
+    position: absolute;
+    top: 100%; /* 버튼 바로 아래에 위치 */
+    left: 0;
+    width: 800px; /* 원하는 너비로 조절 */
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1000;
+    display: flex; /* 좌우 2단 레이아웃 */
+    overflow: hidden;
+}
+
+/* 왼쪽: 대분류 목록 */
+.dropDown-main-categories-container {
+    flex: 0 0 200px; /* 고정 너비 200px */
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    border-right: 1px solid #eee;
+}
+
+.main-category-item {
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+
+    /* 왼쪽정렬 */
+    display: flex;
+    align-items: flex-start;
+}
+
+/* 마우스 올렸을 때 & 활성화 상태일 때 */
+.main-category-item:hover {
+    background-color: #e9ecef;
+}
+
+.main-category-item.active {
+    background-color: #fff;
+    font-weight: bold;
+    color: #e53935; /* 포인트 색상 */
+}
+
+/* 오른쪽: 소분류 그리드 */
+.dropDown-sub-categories-container {
+    flex-grow: 1; /* 남은 공간 모두 사용 */
+    padding: 20px;
+    display: grid;
+    /* 3열 그리드, 각 열은 동일한 너비, 간격 20px */
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    max-height: 400px; /* 스크롤이 필요하면 조절 */
+    overflow-y: auto;
+}
+
+.subcategory-item {
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.2s ease;
+}
+
+.subcategory-item:hover {
+    transform: translateY(-3px); /* 살짝 위로 이동하는 효과 */
+}
+
+.subcategory-item img {
+    width: 80px;
+    object-fit: cover; /* 이미지가 비율에 맞게 채워지도록 */
+    border-radius: 60px;
+    margin-bottom: 8px;
+    border: 1px solid #eee;
+}
+
+.subcategory-item p {
+    margin: 0;
+    font-size: 14px;
+}

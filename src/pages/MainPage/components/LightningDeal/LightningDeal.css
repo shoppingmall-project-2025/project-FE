@@ -1,0 +1,37 @@
+.lightning-deals {
+    background: #0074EA;
+    color:white;
+    width: 80%;
+    margin: 0 auto;
+    padding: 5px 0;
+}
+
+.lightning-deals-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightning-icon {
+    font-size: 24px;
+}
+
+.lightning-title {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    margin-right: 20px;
+}
+
+.lightning-subtitle {
+    font-size: 12px;
+    font-weight: lighter;
+    margin-right: 20px;
+}
+
+.nav-arrow {
+    font-size: 25px;
+    background: transparent;
+    border: none;
+    color: white;
+}

@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
+import MainPage from './pages/MainPage/MainPage';
+import LoginPage from "./pages/LoginPage/LoginPage";
+import { AuthProvider } from "./context/AuthContext";
+import CartPage from "./pages/CartPage/CartPage";
+import {CartProvider} from "./context/CartContext";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export const App: React.FC = () => {
+    return (
+        <AuthProvider>
+            <CartProvider>
+                <Router>
+                    <div className="App">
+                        <Routes>
+                            <Route path="/" element={<MainPage />} />
+                            <Route path="/login" element={<LoginPage />} />
+                            <Route path="/cart" element={<CartPage />} />
+                        </Routes>
+                    </div>
+                </Router>
+            </CartProvider>
+
+        </AuthProvider>
+    );
 }
-
-export default App;

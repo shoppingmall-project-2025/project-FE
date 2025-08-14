@@ -1,0 +1,46 @@
+.user-info {
+    border-bottom: 0.5px solid #ededed;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.user-info-temu-logo {
+    width: 30px;
+    margin: 0 10px;
+}
+.user-info-lock {
+    width: 15px;
+    margin-right: 5px;
+}
+.security-msg {
+    color: green;
+    font-size: 14px;
+    margin-right: 10px;
+}
+.user-status {
+    font-size: 14px;
+}
+
+.breadcrumb-link {
+    font-size: 12px;
+    text-decoration: none;
+}
+.breadcrumb-link2 {
+    font-size: 12px;
+    font-weight: bold;
+}
+.breadcrumb-separator {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+
+.shipping-notice {
+    background: rgb(213, 237, 166);
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+}
